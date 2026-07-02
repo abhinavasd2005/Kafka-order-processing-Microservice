@@ -1,13 +1,13 @@
 <div align="center">
 
-# ⚡ Kafka Order Processing System
+#  Kafka Order Processing System
 
 ### An event-driven order pipeline built to demonstrate distributed-systems backend engineering
 
 **Kafka partitioning · Consumer group rebalancing · At-least-once delivery · Idempotent consumers · Multi-stage retry · Dead Letter Queue**
 
 ![Java](https://img.shields.io/badge/Java_21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot_4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot_3.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL_8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
