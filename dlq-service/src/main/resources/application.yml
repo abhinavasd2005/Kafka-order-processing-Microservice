@@ -1,0 +1,58 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dlq-service
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/dlq_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:BORAjee1!}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    open-in-view: false
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:29092}
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+      properties:
+        spring.json.add.type.headers: false
+
+    consumer:
+      group-id: dlq-service-group
+      auto-offset-reset: earliest
+
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+      properties:
+        spring.json.trusted.packages: "com.kafka.dlqservice.dto"
+        spring.json.value.default.type: com.kafka.dlqservice.dto.OrderMessage
+        spring.json.use.type.headers: false
+
+logging:
+  level:
+    org.springframework.kafka: INFO
+    org.hibernate.SQL: INFO
+    org.springframework.web: INFO
+
+app:
+  kafka:
+    topics:
+      orders: orders
+      orders-dlq: orders-dlq
