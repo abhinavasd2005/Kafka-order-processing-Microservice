@@ -52,12 +52,10 @@
 - [Setup & Installation](#%EF%B8%8F-setup--installation)
 - [Testing the System](#-testing-the-system)
 - [Monitoring & Observability](#-monitoring--observability)
-- [Screenshots](#-screenshots)
-- [Production Readiness Checklist](#-production-readiness-checklist)
 - [Future Improvements](#-future-improvements)
 - [Key Learnings](#-key-learnings)
 - [Conclusion](#-conclusion)
-- [License](#-license)
+
 
 ---
 
@@ -1120,22 +1118,6 @@ This is the tool to have open while running any of the [Testing the System](#-te
 
 ---
 
-## 📸 Screenshots
-
-> Populate `docs/screenshots/` with the following before publishing — these are what turn this README from a description into evidence.
-
-| | |
-|---|---|
-| **Kafka UI — Topics Overview** | **Kafka UI — Consumer Group (3 members)** |
-| ![kafka-ui-topics](docs/screenshots/kafka-ui-topics.png) | ![kafka-ui-consumers](docs/screenshots/kafka-ui-consumers.png) |
-| **Kafka UI — Live Rebalancing (GIF)** | **Postman — `POST /orders`** |
-| ![kafka-ui-rebalance](docs/screenshots/kafka-ui-rebalance.gif) | ![postman-create-order](docs/screenshots/postman-create-order.png) |
-| **Postman — `GET /dlq`** | **MySQL Workbench — 3 schemas** |
-| ![postman-dlq-list](docs/screenshots/postman-dlq-list.png) | ![mysql-workbench](docs/screenshots/mysql-workbench.png) |
-| **Docker Desktop — full stack running** | **Terminal — `docker-compose up --scale`** |
-| ![docker-desktop](docs/screenshots/docker-desktop.png) | ![scale-terminal](docs/screenshots/scale-terminal.png) |
-
----
 
 
 
